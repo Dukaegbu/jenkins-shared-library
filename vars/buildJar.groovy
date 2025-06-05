@@ -1,3 +1,3 @@
 def call() {
- echo 'building the application'
+ echo 'building the jar'
 }
