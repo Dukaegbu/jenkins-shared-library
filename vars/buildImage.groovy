@@ -8,7 +8,7 @@ def call(String imagename) {
         )
     ]) {
         // sh 'docker build -t dukaegbu/dbase-repo:myapp-2.0 .'
-        sh "docker build -t $imagename ."
+        sh "docker build -t ${env.imagename} ."
         sh 'echo $PASSWORD | docker login -u $USERNAME --password-stdin'
         // sh 'docker push dukaegbu/dbase-repo:myapp-2.0'
         sh "docker push $imagename"
