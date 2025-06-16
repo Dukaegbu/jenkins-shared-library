@@ -11,6 +11,6 @@ def call(String imagename) {
         sh "docker build -t ${env.imagename} ."
         sh 'echo $PASSWORD | docker login -u $USERNAME --password-stdin'
         // sh 'docker push dukaegbu/dbase-repo:myapp-2.0'
-        sh "docker push $imagename"
+        sh "docker push ${env.imagename}"
     }
 }
